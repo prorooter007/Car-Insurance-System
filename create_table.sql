@@ -1,0 +1,33 @@
+CREATE TABLE PERSON
+(
+  Driver_id VARCHAR(15) PRIMARY KEY,
+  Full_name VARCHAR(25) NOT NULL,
+  Address VARCHAR(100) NOT NULL
+  );
+
+CREATE TABLE CAR
+(
+  License VARCHAR(15) PRIMARY KEY,
+  Model VARCHAR(20),
+  Year CHAR(4)
+);
+
+CREATE TABLE ACCIDENT
+(
+  Report_no VARCHAR(20) PRIMARY KEY,
+  Date VARCHAR(20),
+  Location CHAR(100)
+);
+
+CREATE TABLE OWNS
+(
+  Driver_id VARCHAR(15) PRIMARY KEY,
+  License VARCHAR(20)
+);
+
+CREATE TABLE PARTICIPATED
+(
+  Driver_id VARCHAR(15) PRIMARY KEY,
+  Report_no VARCHAR(20),
+  Damage_amount INT
+);
